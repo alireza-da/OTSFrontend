@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <form name="myForm" onsubmit="event.preventDefault();"> 
+</html>
+
+
+
+<script>
+
+    var formObj = document.getElementsByName('form')[0];
+    function    ajaxifyForm(formObj, successFcn, x){
+        formObj.addEventListener('submit', function(){
+            var serializedData = formObj.serialize();
+            $(formObj).ajax
+            $.ajax({
+                url: x,
+                type: "POST",
+                data: data,
+                success: successFcn,
+            });
+        })
+    };
+        
+
+
+
+</script>

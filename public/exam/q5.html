@@ -1,0 +1,13 @@
+<?php
+
+    function query_json($query, $con)
+    {
+        $result = mysqli_query($con, $query);
+        $rows = [];
+        while ($row = mysqli_fetch_assoc($result)) {
+           array_push($rows, $row)
+        }
+        json_data = json_encode($rows);
+        return json_data;
+    }
+?>
