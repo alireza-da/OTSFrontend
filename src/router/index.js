@@ -21,6 +21,10 @@ const routes = [
         path: '/:catchAll(.*)',
         name: 'PageNotFound',
         component: PageNotFound,
+    },
+    {
+        path: '/',
+        redirect: '/login'
     }
 ]
 
